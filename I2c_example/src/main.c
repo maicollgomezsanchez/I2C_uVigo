@@ -4,32 +4,32 @@ volatile int exit_code = 0;
 
 /* ADC configuration */
 #define ADC_INSTANCE 0UL
-#define ADC_CHANNEL_0 14U      // ADC channel 0 corresponds to pin PTC14 (pin 46 on chip)
-#define ADC_CHANNEL_1 15U      // ADC channel 1 corresponds to pin PTC15 (pin 45 on chip)
-#define ADC_NUM_CHANNELS 2U    // Number of ADC channels used
-#define ADC_RESOLUTION 255     // ADC resolution of 8 bits (0-255)
-#define MIN_VOLTAGE 5          // Minimum measurable voltage
-#define MAX_VOLTAGE 20         // Maximum measurable voltage
-#define VOLTAGE_DIVISOR 0.2f   // Voltage scaling factor for reading
+#define ADC_CHANNEL_0 14U    // ADC channel 0 corresponds to pin PTC14
+#define ADC_CHANNEL_1 15U    // ADC channel 1 corresponds to pin PTC15
+#define ADC_NUM_CHANNELS 2U  // Number of ADC channels used
+#define ADC_RESOLUTION 255   // ADC resolution of 8 bits
+#define MIN_VOLTAGE 5        // Minimum measurable voltage
+#define MAX_VOLTAGE 20       // Maximum measurable voltage
+#define VOLTAGE_DIVISOR 0.2f // Voltage scaling factor for reading
 
 /* SPI configuration */
-#define SPI_BUFFER_SIZE 2U     // SPI buffer size
-#define SPI_TIMEOUT 10U        // SPI timeout in milliseconds
+#define SPI_BUFFER_SIZE 2U // SPI buffer size
+#define SPI_TIMEOUT 10U    // SPI timeout in milliseconds
 
 /* I2C configuration */
-#define I2C_BUFF_SIZE 4U               // I2C buffer size for communication
-#define I2C_REGISTER_ADDRESS 0U        // I2C address for the register to access
-#define I2C_RESULT_ADRRES 1U           // Address in buffer for the result data
-#define I2C_SIZE_SEND_1_BYTE 1U        // Size of data to send (1 byte)
-#define I2C_ADC1_REG 0x00              // Register for ADC1 value
-#define I2C_ADC2_REG 0x01              // Register for ADC2 value
-#define I2C_GPIO_STATE_REG 0x02        // Register for GPIO state
-#define I2C_GPIO_CONFIG_REG 0x03       // Register for GPIO configuration
+#define I2C_BUFF_SIZE 4U         // I2C buffer size for communication
+#define I2C_REGISTER_ADDRESS 0U  // I2C address for the register to access
+#define I2C_RESULT_ADRRES 1U     // Address in buffer for the result data
+#define I2C_SIZE_SEND_1_BYTE 1U  // Size of data to send (1 byte)
+#define I2C_ADC1_REG 0x00        // Register for ADC1 value
+#define I2C_ADC2_REG 0x01        // Register for ADC2 value
+#define I2C_GPIO_STATE_REG 0x02  // Register for GPIO state
+#define I2C_GPIO_CONFIG_REG 0x03 // Register for GPIO configuration
 
 typedef enum
 {
-    GPIO_LEVEL,      // GPIO level configuration
-    GPIO_POLARITY    // GPIO polarity configuration
+    GPIO_LEVEL,   // GPIO level configuration
+    GPIO_POLARITY // GPIO polarity configuration
 } GPIO_mode_t;
 
 /* Definition of the slave TX and RX buffers for I2C communication */
@@ -60,7 +60,8 @@ uint8_t GetADCValue(uint8_t channel)
     // Scale the result to voltage range 5V - 20V
     int8_t voltage = (result * (MAX_VOLTAGE - MIN_VOLTAGE) * VOLTAGE_DIVISOR / ADC_RESOLUTION) + MIN_VOLTAGE;
 
-    return (voltage < MIN_VOLTAGE) ? MIN_VOLTAGE : (voltage > MAX_VOLTAGE) ? MAX_VOLTAGE : voltage;
+    return (voltage < MIN_VOLTAGE) ? MIN_VOLTAGE : (voltage > MAX_VOLTAGE) ? MAX_VOLTAGE
+                                                                           : voltage;
 }
 
 /* Function to get the GPIO status */
@@ -84,7 +85,11 @@ void SPISetLevel(uint8_t data)
         g_pin_mux_InitConfigArr0->direction == GPIO_OUTPUT_DIRECTION)
     {
         PINS_DRV_SetPins(PTD, data); // Set pin levels
-        LPSPI_DRV_MasterTransferBlocking(INST_LPSPI_1, &data, NULL, SPI_BUFFER_SIZE, SPI_TIMEOUT); // Send data via SPI
+        LPSPI_DRV_MasterTransferBlocking(INST_LPSPI_1,
+                                         &data,
+                                         NULL,
+                                         SPI_BUFFER_SIZE,
+                                         SPI_TIMEOUT); // Send data via SPI
     }
 }
 
@@ -95,7 +100,11 @@ void SPISetPolarity(uint8_t data)
     if (g_pin_mux_InitConfigArr0->base == PORTD)
     {
         PINS_DRV_SetPinsDirection(PTD, data); // Set pin direction
-        LPSPI_DRV_MasterTransferBlocking(INST_LPSPI_1, &data, NULL, SPI_BUFFER_SIZE, SPI_TIMEOUT); // Send data via SPI
+        LPSPI_DRV_MasterTransferBlocking(INST_LPSPI_1,
+                                         &data,
+                                         NULL,
+                                         SPI_BUFFER_SIZE,
+                                         SPI_TIMEOUT); // Send data via SPI
     }
 }
 
@@ -175,9 +184,9 @@ void Init_SPI(void)
 void Init_ADC(void)
 {
     ADC_DRV_ConfigConverter(ADC_INSTANCE, &adc_config_1_ConvConfig0); // Configure the ADC
-    ADC_DRV_AutoCalibration(ADC_INSTANCE); // Perform ADC calibration
-    ADC_DRV_ConfigChan(ADC_INSTANCE, 0U, &adc_config_1_ChnConfig0); // Configure channel 0 (PTC14)
-    ADC_DRV_ConfigChan(ADC_INSTANCE, 0U, &adc_config_1_ChnConfig1); // Configure channel 1 (PTC15)
+    ADC_DRV_AutoCalibration(ADC_INSTANCE);                            // Perform ADC calibration
+    ADC_DRV_ConfigChan(ADC_INSTANCE, 0U, &adc_config_1_ChnConfig0);   // Configure channel 0 (PTC14)
+    ADC_DRV_ConfigChan(ADC_INSTANCE, 0U, &adc_config_1_ChnConfig1);   // Configure channel 1 (PTC15)
 }
 
 int main(void)
@@ -194,7 +203,7 @@ int main(void)
     {
         if (exit_code != 0)
         {
-            break; // Exit loop if exit code is set
+            break;
         }
     }
     return exit_code;
