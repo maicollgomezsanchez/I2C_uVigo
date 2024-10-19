@@ -10,14 +10,24 @@ El microcontrolador está configurado como esclavo I2C, con varios registros acc
 |-----------------------|-------------------------------------------------|---------------|
 | `I2C_ADC1_REG`        | Lectura del valor del ADC en el canal 0         | `0x00`        |
 | `I2C_ADC2_REG`        | Lectura del valor del ADC en el canal 1         | `0x01`        |
-| `I2C_GPIO_STATE_REG`  | Lectura del estado lógico de los GPIOs de salida | `0x02`        |
-| `I2C_GPIO_CONFIG_REG` | Configuración del nivel y polaridad de los GPIOs | `0x03`        |
+| `I2C_GPIO_STATE_REG`  | Lectura del estado lógico GPIO                  | `0x02`        |
+| `I2C_GPIO_CONFIG_REG` | Configuración del nivel y polaridad GPIO        | `0x03`        |
 
 ### Detalles de `I2C_GPIO_CONFIG_REG`
 - Byte 1: Configuración del nivel de los GPIOs (por SPI).
 - Byte 2: Configuración de la polaridad de los GPIOs (por SPI).
 
-## Compilación y Uso
+## Pines Hardware
+- I2C SDA pin 73
+- I2C SCL pin 72
+- ADC canal 1 pin 46 
+- ADC canal 2 pin 45
+- SPI SCK pin 48
+- SPI SOUT pin 28
+- SPI SIN pin 93
+- SPI PCS pin 54
+- Pines GPIO:
+    4, 3, 71, 70, 69, 33, 32, 31
 
 ### Requisitos
 - SDK de NXP S32K144
