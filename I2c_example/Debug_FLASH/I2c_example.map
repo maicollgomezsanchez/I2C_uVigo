@@ -1307,7 +1307,7 @@ LOAD c:/nxp/s32ds.3.4/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/g
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data_2 overflowed with stack and heap)
 OUTPUT(I2c_example.elf elf32-littlearm)
 
-.debug_line     0x00000000     0x7133
+.debug_line     0x00000000     0x7138
  .debug_line    0x00000000       0x82 ./Project_Settings/Startup_Code/startup_S32K144.o
  .debug_line    0x00000082      0x25b ./SDK/platform/devices/S32K144/startup/system_S32K144.o
  .debug_line    0x000002dd      0x16d ./SDK/platform/devices/startup.o
@@ -1333,9 +1333,9 @@ OUTPUT(I2c_example.elf elf32-littlearm)
  .debug_line    0x00006658      0x1c2 ./board/peripherals_lpi2c_config_1.o
  .debug_line    0x0000681a      0x2db ./board/peripherals_lpspi_1.o
  .debug_line    0x00006af5      0x1a9 ./board/pin_mux.o
- .debug_line    0x00006c9e      0x495 ./src/main.o
+ .debug_line    0x00006c9e      0x49a ./src/main.o
 
-.debug_info     0x00000000    0x22fe1
+.debug_info     0x00000000    0x22fda
  .debug_info    0x00000000       0x26 ./Project_Settings/Startup_Code/startup_S32K144.o
  .debug_info    0x00000026      0x521 ./SDK/platform/devices/S32K144/startup/system_S32K144.o
  .debug_info    0x00000547      0x2ad ./SDK/platform/devices/startup.o
@@ -1361,7 +1361,7 @@ OUTPUT(I2c_example.elf elf32-littlearm)
  .debug_info    0x0001f5ce      0x1e1 ./board/peripherals_lpi2c_config_1.o
  .debug_info    0x0001f7af      0xa5d ./board/peripherals_lpspi_1.o
  .debug_info    0x0002020c      0x405 ./board/pin_mux.o
- .debug_info    0x00020611     0x29d0 ./src/main.o
+ .debug_info    0x00020611     0x29c9 ./src/main.o
 
 .debug_abbrev   0x00000000     0x3593
  .debug_abbrev  0x00000000       0x14 ./Project_Settings/Startup_Code/startup_S32K144.o
@@ -1445,7 +1445,7 @@ OUTPUT(I2c_example.elf elf32-littlearm)
  .debug_aranges
                 0x00000aa8       0x60 ./src/main.o
 
-.debug_str      0x00000000     0xa975
+.debug_str      0x00000000     0xa96f
  .debug_str     0x00000000       0x7e ./Project_Settings/Startup_Code/startup_S32K144.o
  .debug_str     0x0000007e      0x3db ./SDK/platform/devices/S32K144/startup/system_S32K144.o
                                 0x467 (size before relaxing)
@@ -1495,10 +1495,10 @@ OUTPUT(I2c_example.elf elf32-littlearm)
                                0x101c (size before relaxing)
  .debug_str     0x0000a7ed       0x2c ./board/pin_mux.o
                                 0x61e (size before relaxing)
- .debug_str     0x0000a819      0x15c ./src/main.o
-                               0x3da1 (size before relaxing)
+ .debug_str     0x0000a819      0x156 ./src/main.o
+                               0x3d9b (size before relaxing)
 
-.debug_loc      0x00000000    0x10f90
+.debug_loc      0x00000000    0x10f31
  .debug_loc     0x00000000      0x10a ./SDK/platform/devices/S32K144/startup/system_S32K144.o
  .debug_loc     0x0000010a       0xec ./SDK/platform/devices/startup.o
  .debug_loc     0x000001f6     0x140b ./SDK/platform/drivers/src/adc/adc_driver.o
@@ -1516,7 +1516,7 @@ OUTPUT(I2c_example.elf elf32-littlearm)
  .debug_loc     0x0000fc97      0x77f ./SDK/platform/drivers/src/pins/pins_driver.o
  .debug_loc     0x00010416      0x56a ./SDK/platform/drivers/src/pins/pins_port_hw_access.o
  .debug_loc     0x00010980      0x275 ./SDK/rtos/osif/osif_baremetal.o
- .debug_loc     0x00010bf5      0x39b ./src/main.o
+ .debug_loc     0x00010bf5      0x33c ./src/main.o
 
 .debug_ranges   0x00000000      0xfe8
  .debug_ranges  0x00000000       0x20 ./SDK/platform/devices/S32K144/startup/system_S32K144.o
