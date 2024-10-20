@@ -11,13 +11,21 @@ El microcontrolador está configurado como esclavo I2C, con varios registros acc
 | `I2C_ADC1_REG`        | Lectura del valor del ADC en el canal 0         | `0x00`        |
 | `I2C_ADC2_REG`        | Lectura del valor del ADC en el canal 1         | `0x01`        |
 | `I2C_GPIO_STATE_REG`  | Lectura del estado lógico GPIO                  | `0x02`        |
-| `I2C_GPIO_CONFIG_REG` | Configuración del nivel y polaridad GPIO        | `0x03`        |
+| `I2C_GPIO_CONFIG_REG` | Configuración del nivel y direccion GPIO        | `0x03`        |
 
 ### Detalles de `I2C_GPIO_CONFIG_REG`
-- Byte 1: Configuración del nivel de los GPIOs (por SPI).
-- Byte 2: Configuración de la polaridad de los GPIOs (por SPI).
+- Byte 1: Configuración de la direccion de los GPIOs (por SPI).
+    1 para salida y 0 para entrada
+- Byte 2: Configuración del nivel de los GPIOs (por SPI).
+    1 para valor logico HIGH y 0 en valor logico LOW
+por ejemplo: 0x03 0x0F 0x0A
+
+    (0x0F) los primeros cuatro pines se configuran como salidas.
+    (0x0A) El pin 3 y 1 estarán en HIGH y los demas pines en LOW.
 
 ## Pines Hardware
+- UART RX pin 81
+- UART TX pin 82
 - I2C SDA pin 73
 - I2C SCL pin 72
 - ADC canal 1 pin 46 
@@ -26,8 +34,15 @@ El microcontrolador está configurado como esclavo I2C, con varios registros acc
 - SPI SOUT pin 28
 - SPI SIN pin 93
 - SPI PCS pin 54
-- Pines GPIO:
-    4, 3, 71, 70, 69, 33, 32, 31
+- Pines GPIO
+    (PT0)  4 
+           3
+          71
+          70
+          69
+          33
+          32
+    (PT7) 31
 
 ### Requisitos
 - SDK de NXP S32K144
@@ -43,3 +58,4 @@ El microcontrolador está configurado como esclavo I2C, con varios registros acc
 1. Flashea el binario generado en la placa NXP S32K144.
 2. Usa un maestro I2C para interactuar con los registros y obtener los valores de los ADCs o configurar los GPIOs.
 3. Utiliza las direcciones I2C descritas anteriormente para enviar y recibir datos.
+4. puedes usar UART para salida de consola usando los puertos mencionados a una velocidad de 9600, o usar la consola de depuracion.
