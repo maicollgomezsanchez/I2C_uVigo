@@ -18,10 +18,9 @@ El microcontrolador está configurado como esclavo I2C, con varios registros acc
     1 para salida y 0 para entrada
 - Byte 2: Configuración del nivel de los GPIOs (por SPI).
     1 para valor logico HIGH y 0 en valor logico LOW
-por ejemplo: 0x03 0x0F 0x0A
-
-    (0x0F) los primeros cuatro pines se configuran como salidas.
-    (0x0A) El pin 3 y 1 estarán en HIGH y los demas pines en LOW.
+    - por ejemplo: 0x03 0x0F 0x0A
+        - (0x0F) los primeros cuatro pines se configuran como salidas.
+        - (0x0A) El pin 3 y 1 estarán en HIGH y los demas pines en LOW.
 
 ## Pines Hardware
 - UART RX pin 81
@@ -35,18 +34,18 @@ por ejemplo: 0x03 0x0F 0x0A
 - SPI SIN pin 93
 - SPI PCS pin 54
 - Pines GPIO
-    (PT0)  4 
-           3
-          71
-          70
-          69
-          33
-          32
-    (PT7) 31
+    - (PT0)  4 
+    - (PT0)  3
+    - (PT0) 71
+    - (PT0) 70
+    - (PT0) 69
+    - (PT0) 33
+    - (PT0) 32
+    - (PT7) 31
 
 ### Requisitos
 - SDK de NXP S32K144
-- Herramientas de desarrollo compatibles con el SDK (e.g., S32 Design Studio)
+- S32 Design Studio
 
 ### Pasos de Compilación
 1. Clona el repositorio o descarga el código fuente.
