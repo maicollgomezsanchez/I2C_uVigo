@@ -2,6 +2,7 @@
 -DCPU_S32K144HFT0VLLT
 -DCPU_S32K144
 -I../SDK/platform/drivers/inc
+-I../SDK/platform/drivers/src/lpuart
 -I../SDK/rtos/osif
 -I"C:/Users/maigom4335/workspaceS32DS.3.4/I2c_example/board"
 -I"C:/Users/maigom4335/workspaceS32DS.3.4/I2c_example/SDK/platform/devices/common"
