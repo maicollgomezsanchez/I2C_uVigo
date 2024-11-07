@@ -1,5 +1,5 @@
 -T
-"C:/Users/maigom4335/workspaceS32DS.3.4/I2c_example/Project_Settings/Linker_Files/S32K144_64_flash.ld"
+"C:/Users/horik/workspaceS32DS.3.4/I2C_uVigo/code/Project_Settings/Linker_Files/S32K144_64_flash.ld"
 -Wl,-Map,"I2c_example.map"
 -Xlinker
 --gc-sections

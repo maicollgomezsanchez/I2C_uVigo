@@ -42,7 +42,7 @@ I2c_example.siz \
 all: I2c_example.elf secondary-outputs
 
 # Tool invocations
-I2c_example.elf: $(OBJS) C:/Users/maigom4335/workspaceS32DS.3.4/I2c_example/Project_Settings/Linker_Files/S32K144_64_flash.ld $(USER_OBJS)
+I2c_example.elf: $(OBJS) C:/Users/horik/workspaceS32DS.3.4/I2C_uVigo/code/Project_Settings/Linker_Files/S32K144_64_flash.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Standard S32DS C Linker'
 	arm-none-eabi-gcc -o "I2c_example.elf" "@I2c_example.args"  $(USER_OBJS) $(LIBS)

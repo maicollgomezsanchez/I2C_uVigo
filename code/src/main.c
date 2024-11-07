@@ -117,7 +117,7 @@ void SPI_Set_Direcction(uint8_t data)
 }
 
 /* I2C Slave callback function for communication handling */
-void I2C_Callback(i2c_slave_event_t slaveEvent, void *userData)
+void lpi2c0_SlaveCallback0(i2c_slave_event_t slaveEvent, void *userData)
 {
     uint32_t instance;
     instance = (uint32_t)userData;

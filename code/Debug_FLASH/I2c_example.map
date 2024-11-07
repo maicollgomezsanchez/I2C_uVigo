@@ -563,8 +563,8 @@ Discarded input sections
  .debug_abbrev  0x00000000       0xfd ./board/peripherals_edma_config_1.o
  .debug_aranges
                 0x00000000       0x18 ./board/peripherals_edma_config_1.o
- .debug_line    0x00000000      0x1d6 ./board/peripherals_edma_config_1.o
- .debug_str     0x00000000      0xa42 ./board/peripherals_edma_config_1.o
+ .debug_line    0x00000000      0x1d4 ./board/peripherals_edma_config_1.o
+ .debug_str     0x00000000      0xa40 ./board/peripherals_edma_config_1.o
  .comment       0x00000000       0xa1 ./board/peripherals_edma_config_1.o
  .ARM.attributes
                 0x00000000       0x39 ./board/peripherals_edma_config_1.o
@@ -591,13 +591,13 @@ Discarded input sections
                 0x00000000       0x48 ./src/main.o
  .text.SPI_Set_Direcction
                 0x00000000       0x40 ./src/main.o
- .text.I2C_Callback
+ .text.lpi2c0_SlaveCallback0
                 0x00000000      0x104 ./src/main.o
  .bss.slaveRxBuffer
                 0x00000000        0x4 ./src/main.o
  .bss.slaveTxBuffer
                 0x00000000        0x4 ./src/main.o
- .rodata.I2C_Callback.str1.4
+ .rodata.lpi2c0_SlaveCallback0.str1.4
                 0x00000000       0x92 ./src/main.o
  .text          0x00000000        0x0 C:/NXP/S32DS.3.4/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-exit.o)
  .data          0x00000000        0x0 C:/NXP/S32DS.3.4/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-exit.o)
@@ -1937,37 +1937,37 @@ LOAD c:/nxp/s32ds.3.4/s32ds/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/bin/../lib/g
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data_2 overflowed with stack and heap)
 OUTPUT(I2c_example.elf elf32-littlearm)
 
-.debug_line     0x00000000     0x8251
+.debug_line     0x00000000     0x81fb
  .debug_line    0x00000000       0x82 ./Project_Settings/Startup_Code/startup_S32K144.o
- .debug_line    0x00000082      0x25b ./SDK/platform/devices/S32K144/startup/system_S32K144.o
- .debug_line    0x000002dd      0x16d ./SDK/platform/devices/startup.o
- .debug_line    0x0000044a      0x76e ./SDK/platform/drivers/src/adc/adc_driver.o
- .debug_line    0x00000bb8     0x1184 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
- .debug_line    0x00001d3c      0x88a ./SDK/platform/drivers/src/edma/edma_driver.o
- .debug_line    0x000025c6      0x347 ./SDK/platform/drivers/src/edma/edma_hw_access.o
- .debug_line    0x0000290d      0x2df ./SDK/platform/drivers/src/edma/edma_irq.o
- .debug_line    0x00002bec      0x33a ./SDK/platform/drivers/src/interrupt/interrupt_manager.o
- .debug_line    0x00002f26      0xe1d ./SDK/platform/drivers/src/lpi2c/lpi2c_driver.o
- .debug_line    0x00003d43      0x1c9 ./SDK/platform/drivers/src/lpi2c/lpi2c_hw_access.o
- .debug_line    0x00003f0c       0x9e ./SDK/platform/drivers/src/lpi2c/lpi2c_irq.o
- .debug_line    0x00003faa      0x43c ./SDK/platform/drivers/src/lpspi/lpspi_hw_access.o
- .debug_line    0x000043e6      0x2d5 ./SDK/platform/drivers/src/lpspi/lpspi_irq.o
- .debug_line    0x000046bb      0x716 ./SDK/platform/drivers/src/lpspi/lpspi_master_driver.o
- .debug_line    0x00004dd1      0x3b3 ./SDK/platform/drivers/src/lpspi/lpspi_shared_function.o
- .debug_line    0x00005184      0x60f ./SDK/platform/drivers/src/lpspi/lpspi_slave_driver.o
- .debug_line    0x00005793      0x96c ./SDK/platform/drivers/src/lpuart/lpuart_driver.o
- .debug_line    0x000060ff      0x3b7 ./SDK/platform/drivers/src/lpuart/lpuart_hw_access.o
- .debug_line    0x000064b6       0xc3 ./SDK/platform/drivers/src/lpuart/lpuart_irq.o
- .debug_line    0x00006579      0x49f ./SDK/platform/drivers/src/pins/pins_driver.o
- .debug_line    0x00006a18      0x2ca ./SDK/platform/drivers/src/pins/pins_port_hw_access.o
- .debug_line    0x00006ce2      0x3d0 ./SDK/rtos/osif/osif_baremetal.o
- .debug_line    0x000070b2      0x227 ./board/clock_config.o
- .debug_line    0x000072d9      0x165 ./board/peripherals_adc_config_1.o
- .debug_line    0x0000743e      0x1c2 ./board/peripherals_lpi2c_config_1.o
- .debug_line    0x00007600      0x2db ./board/peripherals_lpspi_1.o
- .debug_line    0x000078db      0x1de ./board/peripherals_lpuart_1.o
- .debug_line    0x00007ab9      0x1a9 ./board/pin_mux.o
- .debug_line    0x00007c62      0x5ef ./src/main.o
+ .debug_line    0x00000082      0x259 ./SDK/platform/devices/S32K144/startup/system_S32K144.o
+ .debug_line    0x000002db      0x16d ./SDK/platform/devices/startup.o
+ .debug_line    0x00000448      0x76a ./SDK/platform/drivers/src/adc/adc_driver.o
+ .debug_line    0x00000bb2     0x1180 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+ .debug_line    0x00001d32      0x886 ./SDK/platform/drivers/src/edma/edma_driver.o
+ .debug_line    0x000025b8      0x345 ./SDK/platform/drivers/src/edma/edma_hw_access.o
+ .debug_line    0x000028fd      0x2dd ./SDK/platform/drivers/src/edma/edma_irq.o
+ .debug_line    0x00002bda      0x336 ./SDK/platform/drivers/src/interrupt/interrupt_manager.o
+ .debug_line    0x00002f10      0xe19 ./SDK/platform/drivers/src/lpi2c/lpi2c_driver.o
+ .debug_line    0x00003d29      0x1c7 ./SDK/platform/drivers/src/lpi2c/lpi2c_hw_access.o
+ .debug_line    0x00003ef0       0x9e ./SDK/platform/drivers/src/lpi2c/lpi2c_irq.o
+ .debug_line    0x00003f8e      0x438 ./SDK/platform/drivers/src/lpspi/lpspi_hw_access.o
+ .debug_line    0x000043c6      0x2d1 ./SDK/platform/drivers/src/lpspi/lpspi_irq.o
+ .debug_line    0x00004697      0x712 ./SDK/platform/drivers/src/lpspi/lpspi_master_driver.o
+ .debug_line    0x00004da9      0x3af ./SDK/platform/drivers/src/lpspi/lpspi_shared_function.o
+ .debug_line    0x00005158      0x60b ./SDK/platform/drivers/src/lpspi/lpspi_slave_driver.o
+ .debug_line    0x00005763      0x968 ./SDK/platform/drivers/src/lpuart/lpuart_driver.o
+ .debug_line    0x000060cb      0x3b3 ./SDK/platform/drivers/src/lpuart/lpuart_hw_access.o
+ .debug_line    0x0000647e       0xc3 ./SDK/platform/drivers/src/lpuart/lpuart_irq.o
+ .debug_line    0x00006541      0x49b ./SDK/platform/drivers/src/pins/pins_driver.o
+ .debug_line    0x000069dc      0x2c8 ./SDK/platform/drivers/src/pins/pins_port_hw_access.o
+ .debug_line    0x00006ca4      0x3cc ./SDK/rtos/osif/osif_baremetal.o
+ .debug_line    0x00007070      0x223 ./board/clock_config.o
+ .debug_line    0x00007293      0x165 ./board/peripherals_adc_config_1.o
+ .debug_line    0x000073f8      0x1c0 ./board/peripherals_lpi2c_config_1.o
+ .debug_line    0x000075b8      0x2d7 ./board/peripherals_lpspi_1.o
+ .debug_line    0x0000788f      0x1dc ./board/peripherals_lpuart_1.o
+ .debug_line    0x00007a6b      0x1a7 ./board/pin_mux.o
+ .debug_line    0x00007c12      0x5e9 ./src/main.o
 
 .debug_info     0x00000000    0x27d7d
  .debug_info    0x00000000       0x26 ./Project_Settings/Startup_Code/startup_S32K144.o
@@ -2095,68 +2095,68 @@ OUTPUT(I2c_example.elf elf32-littlearm)
  .debug_aranges
                 0x00000c80       0x70 ./src/main.o
 
-.debug_str      0x00000000     0xb822
- .debug_str     0x00000000       0x7e ./Project_Settings/Startup_Code/startup_S32K144.o
- .debug_str     0x0000007e      0x3db ./SDK/platform/devices/S32K144/startup/system_S32K144.o
-                                0x467 (size before relaxing)
- .debug_str     0x00000459      0x20c ./SDK/platform/devices/startup.o
-                                0x456 (size before relaxing)
- .debug_str     0x00000665     0x22b7 ./SDK/platform/drivers/src/adc/adc_driver.o
-                               0x25d6 (size before relaxing)
- .debug_str     0x0000291c     0x2971 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
-                               0x3a42 (size before relaxing)
- .debug_str     0x0000528d     0x18a0 ./SDK/platform/drivers/src/edma/edma_driver.o
-                               0x2a54 (size before relaxing)
- .debug_str     0x00006b2d       0x46 ./SDK/platform/drivers/src/edma/edma_hw_access.o
-                                0x818 (size before relaxing)
- .debug_str     0x00006b73      0x162 ./SDK/platform/drivers/src/edma/edma_irq.o
-                                0x52d (size before relaxing)
- .debug_str     0x00006cd5      0x17a ./SDK/platform/drivers/src/interrupt/interrupt_manager.o
-                                0xbac (size before relaxing)
- .debug_str     0x00006e4f     0x1848 ./SDK/platform/drivers/src/lpi2c/lpi2c_driver.o
-                               0x346e (size before relaxing)
- .debug_str     0x00008697       0x6f ./SDK/platform/drivers/src/lpi2c/lpi2c_hw_access.o
-                                0x3fc (size before relaxing)
- .debug_str     0x00008706       0x5f ./SDK/platform/drivers/src/lpi2c/lpi2c_irq.o
-                                0x2be (size before relaxing)
- .debug_str     0x00008765      0x7cc ./SDK/platform/drivers/src/lpspi/lpspi_hw_access.o
-                               0x1d35 (size before relaxing)
- .debug_str     0x00008f31       0x79 ./SDK/platform/drivers/src/lpspi/lpspi_irq.o
-                                0xb34 (size before relaxing)
- .debug_str     0x00008faa      0x817 ./SDK/platform/drivers/src/lpspi/lpspi_master_driver.o
-                               0x2266 (size before relaxing)
- .debug_str     0x000097c1       0xe4 ./SDK/platform/drivers/src/lpspi/lpspi_shared_function.o
-                                0xd78 (size before relaxing)
- .debug_str     0x000098a5      0x169 ./SDK/platform/drivers/src/lpspi/lpspi_slave_driver.o
-                               0x20d2 (size before relaxing)
- .debug_str     0x00009a0e      0xd1c ./SDK/platform/drivers/src/lpuart/lpuart_driver.o
-                               0x255f (size before relaxing)
- .debug_str     0x0000a72a       0xb9 ./SDK/platform/drivers/src/lpuart/lpuart_hw_access.o
-                               0x10ab (size before relaxing)
- .debug_str     0x0000a7e3       0x69 ./SDK/platform/drivers/src/lpuart/lpuart_irq.o
-                                0x2b5 (size before relaxing)
- .debug_str     0x0000a84c      0x967 ./SDK/platform/drivers/src/pins/pins_driver.o
-                               0x1472 (size before relaxing)
- .debug_str     0x0000b1b3      0x192 ./SDK/platform/drivers/src/pins/pins_port_hw_access.o
-                                0x95a (size before relaxing)
- .debug_str     0x0000b345      0x18c ./SDK/rtos/osif/osif_baremetal.o
-                               0x110e (size before relaxing)
- .debug_str     0x0000b4d1       0x71 ./board/clock_config.o
-                               0x236e (size before relaxing)
- .debug_str     0x0000b542       0x6d ./board/peripherals_adc_config_1.o
-                                0x81f (size before relaxing)
- .debug_str     0x0000b5af       0x3a ./board/peripherals_lpi2c_config_1.o
-                                0x42b (size before relaxing)
- .debug_str     0x0000b5e9       0x42 ./board/peripherals_lpspi_1.o
-                               0x101c (size before relaxing)
- .debug_str     0x0000b62b       0x42 ./board/peripherals_lpuart_1.o
-                                0xddb (size before relaxing)
- .debug_str     0x0000b66d       0x2c ./board/pin_mux.o
-                                0x61e (size before relaxing)
- .debug_str     0x0000b699      0x189 ./src/main.o
-                               0x44ec (size before relaxing)
+.debug_str      0x00000000     0xb829
+ .debug_str     0x00000000       0x7c ./Project_Settings/Startup_Code/startup_S32K144.o
+ .debug_str     0x0000007c      0x3db ./SDK/platform/devices/S32K144/startup/system_S32K144.o
+                                0x465 (size before relaxing)
+ .debug_str     0x00000457      0x20c ./SDK/platform/devices/startup.o
+                                0x454 (size before relaxing)
+ .debug_str     0x00000663     0x22b7 ./SDK/platform/drivers/src/adc/adc_driver.o
+                               0x25d4 (size before relaxing)
+ .debug_str     0x0000291a     0x2971 ./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o
+                               0x3a40 (size before relaxing)
+ .debug_str     0x0000528b     0x18a0 ./SDK/platform/drivers/src/edma/edma_driver.o
+                               0x2a52 (size before relaxing)
+ .debug_str     0x00006b2b       0x46 ./SDK/platform/drivers/src/edma/edma_hw_access.o
+                                0x816 (size before relaxing)
+ .debug_str     0x00006b71      0x162 ./SDK/platform/drivers/src/edma/edma_irq.o
+                                0x52b (size before relaxing)
+ .debug_str     0x00006cd3      0x17a ./SDK/platform/drivers/src/interrupt/interrupt_manager.o
+                                0xbaa (size before relaxing)
+ .debug_str     0x00006e4d     0x1848 ./SDK/platform/drivers/src/lpi2c/lpi2c_driver.o
+                               0x346c (size before relaxing)
+ .debug_str     0x00008695       0x6f ./SDK/platform/drivers/src/lpi2c/lpi2c_hw_access.o
+                                0x3fa (size before relaxing)
+ .debug_str     0x00008704       0x5f ./SDK/platform/drivers/src/lpi2c/lpi2c_irq.o
+                                0x2bc (size before relaxing)
+ .debug_str     0x00008763      0x7cc ./SDK/platform/drivers/src/lpspi/lpspi_hw_access.o
+                               0x1d33 (size before relaxing)
+ .debug_str     0x00008f2f       0x79 ./SDK/platform/drivers/src/lpspi/lpspi_irq.o
+                                0xb32 (size before relaxing)
+ .debug_str     0x00008fa8      0x817 ./SDK/platform/drivers/src/lpspi/lpspi_master_driver.o
+                               0x2264 (size before relaxing)
+ .debug_str     0x000097bf       0xe4 ./SDK/platform/drivers/src/lpspi/lpspi_shared_function.o
+                                0xd76 (size before relaxing)
+ .debug_str     0x000098a3      0x169 ./SDK/platform/drivers/src/lpspi/lpspi_slave_driver.o
+                               0x20d0 (size before relaxing)
+ .debug_str     0x00009a0c      0xd1c ./SDK/platform/drivers/src/lpuart/lpuart_driver.o
+                               0x255d (size before relaxing)
+ .debug_str     0x0000a728       0xb9 ./SDK/platform/drivers/src/lpuart/lpuart_hw_access.o
+                               0x10a9 (size before relaxing)
+ .debug_str     0x0000a7e1       0x69 ./SDK/platform/drivers/src/lpuart/lpuart_irq.o
+                                0x2b3 (size before relaxing)
+ .debug_str     0x0000a84a      0x967 ./SDK/platform/drivers/src/pins/pins_driver.o
+                               0x1470 (size before relaxing)
+ .debug_str     0x0000b1b1      0x192 ./SDK/platform/drivers/src/pins/pins_port_hw_access.o
+                                0x958 (size before relaxing)
+ .debug_str     0x0000b343      0x18c ./SDK/rtos/osif/osif_baremetal.o
+                               0x110c (size before relaxing)
+ .debug_str     0x0000b4cf       0x71 ./board/clock_config.o
+                               0x236c (size before relaxing)
+ .debug_str     0x0000b540       0x6d ./board/peripherals_adc_config_1.o
+                                0x81d (size before relaxing)
+ .debug_str     0x0000b5ad       0x3a ./board/peripherals_lpi2c_config_1.o
+                                0x429 (size before relaxing)
+ .debug_str     0x0000b5e7       0x42 ./board/peripherals_lpspi_1.o
+                               0x101a (size before relaxing)
+ .debug_str     0x0000b629       0x42 ./board/peripherals_lpuart_1.o
+                                0xdd9 (size before relaxing)
+ .debug_str     0x0000b66b       0x2c ./board/pin_mux.o
+                                0x61c (size before relaxing)
+ .debug_str     0x0000b697      0x192 ./src/main.o
+                               0x44f3 (size before relaxing)
 
-.debug_loc      0x00000000    0x1346a
+.debug_loc      0x00000000    0x13454
  .debug_loc     0x00000000      0x10a ./SDK/platform/devices/S32K144/startup/system_S32K144.o
  .debug_loc     0x0000010a       0xec ./SDK/platform/devices/startup.o
  .debug_loc     0x000001f6     0x140b ./SDK/platform/drivers/src/adc/adc_driver.o
@@ -2176,7 +2176,7 @@ OUTPUT(I2c_example.elf elf32-littlearm)
  .debug_loc     0x0001220f      0x77f ./SDK/platform/drivers/src/pins/pins_driver.o
  .debug_loc     0x0001298e      0x56a ./SDK/platform/drivers/src/pins/pins_port_hw_access.o
  .debug_loc     0x00012ef8      0x275 ./SDK/rtos/osif/osif_baremetal.o
- .debug_loc     0x0001316d      0x2fd ./src/main.o
+ .debug_loc     0x0001316d      0x2e7 ./src/main.o
 
 .debug_ranges   0x00000000     0x11e8
  .debug_ranges  0x00000000       0x20 ./SDK/platform/devices/S32K144/startup/system_S32K144.o
